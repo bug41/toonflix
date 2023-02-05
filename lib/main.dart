@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +13,8 @@ class App extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
+            centerTitle: true,
+            elevation: 9,
             title: Text('Hello flutter!'),
           ),
           body: Center(

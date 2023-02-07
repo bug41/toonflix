@@ -12,13 +12,34 @@ class App extends StatelessWidget {
     //return CupertinoApp()
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            elevation: 9,
-            title: Text('Hello flutter!'),
-          ),
-          body: Center(
-            child: Text('Hello world!'),
+          backgroundColor: Colors.black,
+          body: Column(
+            children: [
+              const SizedBox(
+                height: 80,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Column(
+                    children: const [
+                      Text(
+                        'Hey, Bug41',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'Welcome !!!!!!!!',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              )
+            ],
           )),
     );
   }

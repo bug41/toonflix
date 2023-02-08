@@ -12,8 +12,12 @@ class App extends StatelessWidget {
     //return CupertinoApp()
     return MaterialApp(
       home: Scaffold(
-          backgroundColor: Colors.black,
-          body: Column(
+        backgroundColor: Color(0xFF181818),
+        body: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 40,
+          ),
+          child: Column(
             children: [
               const SizedBox(
                 height: 80,
@@ -22,17 +26,22 @@ class App extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: const [
                       Text(
                         'Hey, Bug41',
                         style: TextStyle(
                           color: Colors.white,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                       Text(
                         'Welcome !!!!!!!!',
                         style: TextStyle(
-                          color: Colors.white,
+                          //color: Colors.white.withOpacity(.8),
+                          color: Color.fromRGBO(255, 255, 255, 0.8),
+                          fontSize: 18,
                         ),
                       ),
                     ],
@@ -40,7 +49,9 @@ class App extends StatelessWidget {
                 ],
               )
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }

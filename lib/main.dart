@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+const taxAmount = 15;
+const priceAmount = 30;
+
+var finalPrice = taxAmount + priceAmount;
+
 void main() {
   runApp(App());
 }

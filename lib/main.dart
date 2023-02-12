@@ -73,9 +73,10 @@ class App extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     decoration: BoxDecoration(
@@ -91,14 +92,14 @@ class App extends StatelessWidget {
                         'Transfer',
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                       ),
                     ),
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: const Color(0xFF1F2123),
                       borderRadius: BorderRadius.circular(45),
                     ),
                     child: const Padding(

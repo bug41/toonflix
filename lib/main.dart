@@ -13,11 +13,11 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  List<int> numbers = [];
+  bool showTitle = true;
 
-  void onClicked() {
+  void toggleTitle() {
     setState(() {
-      numbers.add(numbers.length);
+      showTitle = !showTitle;
     });
   }
 
@@ -38,8 +38,12 @@ class _AppState extends State<App> {
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              MyLargeTitle(),
+            children: [
+              showTitle ? const MyLargeTitle() : const Text('Nothing to see'),
+              IconButton(
+                onPressed: toggleTitle,
+                icon: const Icon(Icons.remove_red_eye),
+              ),
             ],
           ),
         ),
@@ -48,13 +52,33 @@ class _AppState extends State<App> {
   }
 }
 
-class MyLargeTitle extends StatelessWidget {
+class MyLargeTitle extends StatefulWidget {
   const MyLargeTitle({
     super.key,
   });
 
   @override
+  State<MyLargeTitle> createState() => _MyLargeTitleState();
+}
+
+class _MyLargeTitleState extends State<MyLargeTitle> {
+  @override
+  void initState() {
+    //초기화 할때 호출되는 메소드
+    super.initState();
+    print('initState!');
+  }
+
+  @override
+  void dispose() {
+    // 위젯이 스크린에서 제거됐을때 호출되는 메소드
+    super.dispose();
+    print('dispose!');
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print('build!');
     return Text(
       'My Large Title',
       style: TextStyle(

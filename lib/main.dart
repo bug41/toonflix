@@ -25,30 +25,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     //어떤 family 스타일 쓰고싶은지 선언하기
     //return CupertinoApp()
-    return MaterialApp(
-      theme: ThemeData(
-        textTheme: const TextTheme(
-          titleLarge: TextStyle(
-            color: Colors.purple,
-          ),
-        ),
-      ),
-      home: Scaffold(
-        backgroundColor: const Color(0xFFF4EDD8),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              showTitle ? const MyLargeTitle() : const Text('Nothing to see'),
-              IconButton(
-                onPressed: toggleTitle,
-                icon: const Icon(Icons.remove_red_eye),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+    return const MaterialApp();
   }
 }
 

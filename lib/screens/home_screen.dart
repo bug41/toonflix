@@ -30,11 +30,52 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Flexible(
             flex: 3,
-            child: Container(),
+            child: Center(
+              child: IconButton(
+                iconSize: 120,
+                color: Theme.of(context).cardColor,
+                onPressed: () {},
+                icon: const Icon(Icons.play_circle_outline),
+              ),
+            ),
           ),
           Flexible(
             flex: 1,
-            child: Container(),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration:
+                        BoxDecoration(color: Theme.of(context).cardColor),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Pomodoros',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Theme.of(context)
+                                  .textTheme
+                                  .displayLarge!
+                                  .color),
+                        ),
+                        Text(
+                          '0',
+                          style: TextStyle(
+                              fontSize: 58,
+                              fontWeight: FontWeight.w600,
+                              color: Theme.of(context)
+                                  .textTheme
+                                  .displayLarge!
+                                  .color),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

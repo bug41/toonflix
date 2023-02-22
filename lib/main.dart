@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
 
 void main() {
   runApp(const App());
@@ -14,16 +13,7 @@ class App extends StatelessWidget {
     //어떤 family 스타일 쓰고싶은지 선언하기
     //return CupertinoApp()
     return MaterialApp(
-      theme: ThemeData(
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-            color: Color(0xFF232B55),
-          ),
-        ),
-        cardColor: const Color(0xFFF4EDDB),
-        scaffoldBackgroundColor: const Color(0xFFE7626C),
-      ),
-      home: const HomeScreen(),
+      home: Container(),
     );
   }
 }

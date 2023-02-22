@@ -71,6 +71,20 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Flexible(
+            flex: 1,
+            child: Row(
+              children: const [
+                Text(
+                  'data',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+          Flexible(
             flex: 3,
             child: Center(
               child: IconButton(

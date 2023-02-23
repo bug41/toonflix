@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/screens/home_screen.dart';
 
 void main() {
   runApp(const App());
@@ -12,8 +13,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     //어떤 family 스타일 쓰고싶은지 선언하기
     //return CupertinoApp()
-    return MaterialApp(
-      home: Container(),
+    return const MaterialApp(
+      home: HomeScreen(),
     );
   }
 }

@@ -13,7 +13,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     //어떤 family 스타일 쓰고싶은지 선언하기
     //return CupertinoApp()
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeScreen(),
     );
   }

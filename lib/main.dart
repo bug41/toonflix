@@ -9,7 +9,7 @@ void main() {
 class App extends StatelessWidget {
   const App({super.key});
 
-  @override
+  @override //코드 재사용성 높임
   Widget build(BuildContext context) {
     //어떤 family 스타일 쓰고싶은지 선언하기
     //return CupertinoApp()
